@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ambimax_StaticBlockScheduler>
+            <version>1.0.0</version>
+        </Ambimax_StaticBlockScheduler>
+    </modules>
+
+    <global>
+        <models>
+            <ambimax_staticblockscheduler>
+                <class>Ambimax_StaticBlockScheduler_Model</class>
+                <resourceModel>ambimax_staticblockscheduler_resource</resourceModel>
+            </ambimax_staticblockscheduler>
+            <ambimax_staticblockscheduler_resource>
+                <class>Ambimax_StaticBlockScheduler_Model_Resource</class>
+            </ambimax_staticblockscheduler_resource>
+        </models>
+
+        <blocks>
+            <ambimax_staticblockscheduler>
+                <class>Ambimax_StaticBlockScheduler_Block</class>
+            </ambimax_staticblockscheduler>
+        </blocks>
+
+        <resources>
+            <ambimax_staticblockscheduler_setup>
+                <setup>
+                    <module>Ambimax_StaticBlockScheduler</module>
+                    <class>Ambimax_StaticBlockScheduler_Model_Resource_Setup</class>
+                </setup>
+            </ambimax_staticblockscheduler_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <events>
+            <adminhtml_cms_page_edit_tab_main_prepare_form>
+                <observers>
+                    <ambimax_staticblockscheduler>
+                        <class>ambimax_staticblockscheduler/observer</class>
+                        <method>showSomething</method>
+                    </ambimax_staticblockscheduler>
+                </observers>
+            </adminhtml_cms_page_edit_tab_main_prepare_form>
+        </events>
+    </adminhtml>
+</config>

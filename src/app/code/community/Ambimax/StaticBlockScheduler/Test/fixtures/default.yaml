@@ -1,0 +1,31 @@
+---
+
+tables:
+  cms_block:
+    -  block_id: 1
+      title: "Footer Links"
+      identifier: footer_links
+      content: ""
+      creation_time: "2017-07-21 08:21:16"
+      update_time: "2017-07-21 08:21:16"
+      is_active: 1
+    -  block_id: 2
+      title: "Footer Links Company"
+      identifier: footer_links_company
+      content: ""
+      creation_time: "2017-07-21 08:21:16"
+      update_time: "2017-07-21 08:21:16"
+      is_active: 1
+    - block_id: 3
+      title: "Cookie restriction notice"
+      identifier: cookie_restriction_notice_block
+      content: ""
+      creation_time: "2017-07-21 08:21:16"
+      update_time: "2017-07-21 08:21:16"
+      is_active: 1
+    - block_id: 4
+      title: "Amaze Fotter links"
+      identifier: amaze_footer_links
+      content: ""
+      creation_time: "2018-02-12 12:33:25"
+      is_active: 1

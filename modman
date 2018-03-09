@@ -1,0 +1,4 @@
+src/app/code/community/Ambimax/StaticBlockScheduler                          app/code/community/Ambimax/StaticBlockScheduler  
+src/app/design/frontend/base/default/layout/ambimax/staticblockscheduler.xml app/design/frontend/base/default/layout/ambimax/staticblockscheduler.xml
+src/app/design/frontend/base/default/template/ambimax/staticblockscheduler   app/design/frontend/base/default/template/ambimax/staticblockscheduler
+src/app/etc/modules/Ambimax_StaticBlockScheduler.xml                         app/etc/modules/Ambimax_StaticBlockScheduler.xml 
