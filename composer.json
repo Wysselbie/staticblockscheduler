@@ -1,0 +1,16 @@
+{
+  "name": "ambimax/magento-module-ambimax-staticblockscheduler",
+  "type": "magento-module",
+  "description": "Module to display any static block, managed by time",
+  "homepage": "http://www.ambimax.de",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "authors":[
+    {
+      "name":"Dominik Wißler",
+      "email":"dw@ambimax.de"
+    }
+  ]
+}
+

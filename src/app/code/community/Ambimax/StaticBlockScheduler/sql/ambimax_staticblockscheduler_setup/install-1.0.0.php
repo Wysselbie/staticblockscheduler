@@ -37,16 +37,5 @@ $installer->getConnection()->addColumn(
     )
 );
 
-$installer->getConnection()->addColumn(
-    $table,
-    'location',
-    array(
-        'type' => Varien_Db_Ddl_Table::TYPE_TEXT,
-        'length' => 32,
-        'nullable' => true,
-        'default' => null,
-        'comment' => 'Created by Ambimax_StaticBlockScheduler'
-    )
-);
 
 $installer->endSetup();

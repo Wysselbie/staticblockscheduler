@@ -14,7 +14,7 @@ class Ambimax_StaticBlockScheduler_Test_sql_InstallTest extends EcomDev_PHPUnit_
 
     public function setUp()
     {
-        $this->_dbConnection = Mage::getSingleton('core/resource')->getConnection('externaldb_read');
+        $this->_dbConnection = Mage::getSingleton('core/resource')->getConnection('read');
     }
 
     public function testIfTheColumnIsActiveFromHasBeenAddedToCmsBlockTable()
@@ -26,11 +26,6 @@ class Ambimax_StaticBlockScheduler_Test_sql_InstallTest extends EcomDev_PHPUnit_
     public function testIfTheColumnIsActiveToHasBeenAddedToCmsBlockTable()
     {
         $this->assertTableColumnExists('cms_block', 'is_active_to');
-    }
-
-    public function testIfTheColumnLocationHasBeenAddedToCmsBlockTable()
-    {
-        $this->assertTableColumnExists('cms_block', 'location');
     }
 
     public function assertTableColumnExists($tableName, $columnName)
