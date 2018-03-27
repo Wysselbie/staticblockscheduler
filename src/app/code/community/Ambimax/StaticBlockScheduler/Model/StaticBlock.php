@@ -15,8 +15,8 @@ class Ambimax_StaticBlockScheduler_Model_StaticBlock extends Mage_Cms_Model_Bloc
 
     public function hasValidTimeFrame()
     {
-        $dateTimeFrom = DateTime::createFromFormat("Y-m-d H:i:s", $this->getData('is_active_from'));
-        $dateTimeTo = DateTime::createFromFormat("Y-m-d H:i:s", $this->getData('is_active_to'));
+        $dateTimeFrom = DateTime::createFromFormat("Y-m-d", $this->getData('is_active_from'));
+        $dateTimeTo = DateTime::createFromFormat("Y-m-d", $this->getData('is_active_to'));
 
         return $dateTimeTo > $dateTimeFrom;
 
@@ -24,9 +24,9 @@ class Ambimax_StaticBlockScheduler_Model_StaticBlock extends Mage_Cms_Model_Bloc
 
     public function isInTimeFrame()
     {
-        $dateTimeFrom = DateTime::createFromFormat("Y-m-d H:i:s", $this->getData('is_active_from'));
-        $dateTimeTo = DateTime::createFromFormat("Y-m-d H:i:s", $this->getData('is_active_to'));
-        $dateTimeNow = new DateTime("now");
+        $dateTimeFrom = DateTime::createFromFormat("Y-m-d", $this->getData('is_active_from'));
+        $dateTimeTo = DateTime::createFromFormat("Y-m-d", $this->getData('is_active_to'));
+        $dateTimeNow = new DateTime();
 
         return $dateTimeFrom <= $dateTimeNow && $dateTimeNow <= $dateTimeTo;
     }

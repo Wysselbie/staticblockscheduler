@@ -29,7 +29,7 @@ class Ambimax_StaticBlockScheduler_Test_Model_StaticBlockTest extends PHPUnit_Fr
     {
         $block = Mage::getModel('ambimax_staticblockscheduler/staticBlock')->load(1);
 
-        $this->assertSame('2017-12-01 07:00:00', $block->getData('is_active_from'));
+        $this->assertSame('2017-12-01', $block->getData('is_active_from'));
     }
 
     /**
@@ -39,7 +39,7 @@ class Ambimax_StaticBlockScheduler_Test_Model_StaticBlockTest extends PHPUnit_Fr
     {
         $block = Mage::getModel('ambimax_staticblockscheduler/staticBlock')->load(1);
 
-        $this->assertSame('2017-12-26 22:00:00', $block->getData('is_active_to'));
+        $this->assertSame('2017-12-26', $block->getData('is_active_to'));
     }
 
     /**

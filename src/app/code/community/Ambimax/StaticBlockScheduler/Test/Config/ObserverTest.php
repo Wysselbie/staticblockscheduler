@@ -18,9 +18,9 @@ class Ambimax_StaticBlockScheduler_Test_Config_ObserverTest extends EcomDev_PHPU
         $this->assertFileExists($this->_dirToObserverPhpFile);
         $this->assertEventObserverDefined(
             'adminhtml',
-            'adminhtml_cms_page_edit_tab_main_prepare_form',
+            'adminhtml_block_html_before',
             'ambimax_staticblockscheduler/observer',
-            'showSomething'
+            'addTheFromAndToDateFieldsToFieldset'
         );
     }
 

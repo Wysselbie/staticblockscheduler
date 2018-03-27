@@ -9,8 +9,8 @@ tables:
       creation_time: "2017-11-30 08:21:16"
       update_time: "2017-11-30 08:21:16"
       is_active: 1
-      is_active_from: "2017-12-01 07:00:00"
-      is_active_to: "2017-12-26 22:00:00"
+      is_active_from: "2017-12-01"
+      is_active_to: "2017-12-26"
     - block_id: 2
       title: "Valentines Day"
       identifier: valentines_day

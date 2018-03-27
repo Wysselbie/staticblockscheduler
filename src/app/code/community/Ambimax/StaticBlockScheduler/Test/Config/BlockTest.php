@@ -15,11 +15,6 @@ class Ambimax_StaticBlockScheduler_Test_Config_BlockTest extends EcomDev_PHPUnit
         $this->assertFileExists($this->getModuleDir('/Block/StaticBlock.php'));
     }
 
-    public function testIfTemplateFileExists()
-    {
-        $this->assertFileExists($this->getModuleDir('/staticBlock.phtml', 'template'));
-    }
-
     public function testIfLayoutXmlFileExists()
     {
         $this->assertFileExists($this->getModuleDir('/staticblockscheduler.xml', 'layout'));
