@@ -21,6 +21,11 @@
             <ambimax_staticblockscheduler>
                 <class>Ambimax_StaticBlockScheduler_Block</class>
             </ambimax_staticblockscheduler>
+                <!--<cms>-->
+                    <!--<rewrite>-->
+                        <!--<block>Ambimax_StaticBlockScheduler_Block_StaticBlock</block>-->
+                    <!--</rewrite>-->
+                <!--</cms>-->
         </blocks>
 
         <helpers>
@@ -74,14 +79,14 @@
     </adminhtml>
     <frontend>
         <events>
-            <core_block_abstract_to_html_before>
+            <core_block_abstract_to_html_after>
                 <observers>
                     <ambimax_staticblockscheduler_banner>
                         <class>ambimax_staticblockscheduler/observer</class>
                         <method>checkIfShallBeDisplayed</method>
                     </ambimax_staticblockscheduler_banner>
                 </observers>
-            </core_block_abstract_to_html_before>
+            </core_block_abstract_to_html_after>
         </events>
     </frontend>
 </config>

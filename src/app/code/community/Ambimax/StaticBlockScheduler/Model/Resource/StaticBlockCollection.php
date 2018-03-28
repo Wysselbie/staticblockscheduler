@@ -26,7 +26,7 @@ class Ambimax_StaticBlockScheduler_Model_Resource_StaticBlockCollection extends 
 
     /**
      * @param $block_id
-     * @return Varien_Object
+     * @return Ambimax_StaticBlockScheduler_Model_StaticBlock
      */
     public function getStaticBlockByBlockId($block_id)
     {

@@ -6,6 +6,8 @@
  * Time: 11:56
  */
 
+define('BR', '</br>');
+
 class Ambimax_StaticBlockScheduler_Model_Observer extends Mage_Core_Model_Observer
 {
 
@@ -138,25 +140,46 @@ class Ambimax_StaticBlockScheduler_Model_Observer extends Mage_Core_Model_Observ
     {
         $block = $observer->getBlock();
 
+        if ($block instanceof Mage_Cms_Block_Block && $block->getBlockId()) {
 
-        if ($block instanceof Ambimax_StaticBlockScheduler_Block_StaticBlock) {
+            $staticBlock = Mage::getModel('ambimax_staticblockscheduler/staticBlock')->load($block->getBlockId());
 
-            //TODO setData(getData);
+            if(!$staticBlock->isCurrentlyActive()) {
+                return $observer->getTransport()->setHtml('');
+            }
+
+
+//            $staticBlock->setData($block->getData());
+
+//            print_r($block->getData());
+//            print_r($observer->getTransport()->getData());
+//            exit;
 
 //            $blockId = $block->getData('block_id');
 //
 //            $collection = Mage::getResourceModel('ambimax_staticblockscheduler/staticBlockCollection');
-//            /** @var Ambimax_StaticBlockScheduler_Block_StaticBlock $ambimaxBlock */
-//            $ambimaxBlock = $collection->getStaticBlockByBlockId($blockId);
+//
+//            /** @var Ambimax_StaticBlockScheduler_Block_StaticBlock $staticBlockModel */
+//            $staticBlockModel = $collection->getStaticBlockByBlockId($blockId);
+//
+//            $staticBlock = new Ambimax_StaticBlockScheduler_Block_StaticBlock();
+//
+//            $staticBlock->setData($staticBlockModel->getData());
+//            $staticBlock->setData($block->getData('is_active_from'));
+//            $staticBlock->setData($block->getData('is_active_to'));
 //
 //
-//            if ($ambimaxBlock->isCurrentlyActive()) {
+//            var_dump($staticBlock->isCurrentlyActive());
+//
+//            return;
+//            if ($staticBlock->isCurrentlyActive()) {
 //                return $this;
 //            } else {
+//                $observer->getTransport()->setHtml('you fucking still suck!');
 //                return $this;
 //            }
         }
-        return $this;
+//        return $this;
     }
 
 
